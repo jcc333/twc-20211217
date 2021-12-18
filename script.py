@@ -12,6 +12,7 @@ account_sid = os.getenv('SID')
 auth_token = os.getenv('Auth')
 client = Client(account_sid, auth_token)
 
+#Ability to change message 
 message = client.messages \
                 .create(
                      body="Hi, this is a test",
