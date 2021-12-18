@@ -6,3 +6,6 @@ https://github.com/SeanDaBlack/KelloggBot/pulls
 
 # Aspire Site
 https://aspire-together.org/contact-us/
+
+# Info on Crisis Pregnancy Center
+https://crisispregnancycentermap.com/
