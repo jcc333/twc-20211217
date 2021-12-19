@@ -20,4 +20,11 @@ message = client.messages \
                      to='+19152675166'
                  )
 
+conversation = client.conversations \
+    .conversations \
+    .create(
+         messaging_service_sid='MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+         friendly_name='Friendly Conversation'
+     )
+
 print(message.sid)
