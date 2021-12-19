@@ -1,5 +1,7 @@
 # Download the helper library from https://www.twilio.com/docs/python/install
 import os
+import random
+
 from twilio.rest import Client
 from dotenv import load_dotenv 
 
@@ -12,19 +14,19 @@ account_sid = os.getenv('SID')
 auth_token = os.getenv('Auth')
 client = Client(account_sid, auth_token)
 
+def randomPregnancyIntro():
+    message = ['Hello! I think I am pregnant']
+    return (random.choice(message))
+
+
 #Ability to change message 
 message = client.messages \
                 .create(
-                     body="Hi, this is a test",
+                     body=randomPregnancyIntro(),
                      from_='+13306484254',
                      to='+19152675166'
                  )
 
-conversation = client.conversations \
-    .conversations \
-    .create(
-         messaging_service_sid='MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-         friendly_name='Friendly Conversation'
-     )
+
 
 print(message.sid)
